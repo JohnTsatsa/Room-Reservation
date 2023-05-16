@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;900&display=swap');
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #e2e2e2;
+  font-family: 'Roboto', sans-serif;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 2rem;
+  margin: 1.5rem 0;
+}
+
+/*? ===  "plus" button  === */
+.header-container button {
+  border: none;
+  font-size: 40px;
+  background-color: #1088ff00;
+  color: rgb(156, 148, 189);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 30px;
+  font-weight:800;
+
+}
+
+/*! ======================     "STYLE BOOKINGS PAGE"    ============================*/
+
+.list-of-bookings {
+  list-style: none;
+}
+
+.list-of-bookings li {
+  margin: 0 1.2rem 1.5rem;
+  padding-bottom: 0.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-image: linear-gradient(to right, transparent, black, black, transparent);
+  background-position: bottom;
+  background-size: 115% 2px;
+  background-repeat: no-repeat;
+}
+
+/*? === trashcan  ==== */
+.list-of-bookings button {
+  border-style: solid;
+  border-color: rgb(156, 148, 189);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*! ======================     END "STYLE BOOKINGS PAGE"    ============================*/
+
+/*! ===============================     "STYLE CALENDAR PAGE"    ========================================*/
+/*! ======================     "STYLE TOP OF CALENDAR PAGE"    ============================*/
+.input-area {
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.input-area input {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  width: 80%;
+  padding: 0.2rem;
+  border-radius: 5px;
+  outline: none;
+  border-style: solid;
+}
+
+.calendar-page {
+  text-align: center;
+}
+/*! ======================     END "STYLE TOP OF CALENDAR PAGE"    ============================*/
+
+/*! ======================     "STYLING CALENDAR"    ============================*/
+.react-calendar {
+  width: 350px;
+  max-width: 90%;
+  background: white;
+  /* border: 10px solid #2228428f; */
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.125em;
+  margin: 2rem auto 1rem;
+}
+
+.react-calendar,
+.react-calendar *,
+.react-calendar *:before,
+.react-calendar *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.react-calendar button {
+  margin: 0;
+  border: 1px solid rgba(40, 49, 131, 0.521);
+}
+
+.react-calendar button:enabled:hover {
+  cursor: pointer;
+}
+
+.react-calendar__navigation {
+  display: flex;
+  height: 54px;
+  margin-bottom: 1em;
+  background-color: #7a97f8;
+}
+
+.react-calendar__navigation button {
+  min-width: 60px;
+  background: none;
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  border: none;
+}
+
+.react-calendar__navigation button:enabled:hover,
+.react-calendar__navigation button:enabled:focus {
+  color: rgb(250, 250, 250);
+}
+
+.react-calendar__month-view__weekdays {
+  text-align: center;
+  font-weight: bold;
+  font-size: .85em;
+}
+
+/*? to remove dotted underine in weekdays */
+abbr[title] {
+  text-decoration: none;
+}
+
+.react-calendar__month-view__weekdays__weekday {
+  padding: 0.2em 0;
+}
+
+.react-calendar__month-view__days__day--weekend {
+  color: #d10000;
+}
+
+.react-calendar__month-view__days__day--neighboringMonth {
+  color: #00000056;
+}
+
+.react-calendar__tile {
+  max-width: 100%;
+  padding: 7px;
+  background: none;
+  text-align: center;
+  line-height: 16px;
+}
+
+.react-calendar__tile:disabled {
+  background-color: #f0f0f0;
+  color: rgb(204, 203, 207);
+}
+
+.react-calendar__tile:enabled:hover,
+.react-calendar__tile:enabled:focus {
+  background-color: #85c5fa;
+}
+
+.react-calendar__tile--now {
+  background: #7a97f8;
+  color: rgb(0, 0, 0);
+  position: relative;
+}
+
+.react-calendar__tile--now::before {
+  content: '';
+  position: absolute;
+  border: 16px solid white;
+  width: 60px;
+  height: 60px;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.react-calendar__tile--active {
+  background: #006edc;
+  color: white;
+  position: relative;
+}
+
+.react-calendar__tile--active::before {
+  border: none;
+}
+
+.react-calendar__tile--active:enabled:hover,
+.react-calendar__tile--active:enabled:focus {
+  background: #1087ff;
+}
+
+.react-calendar--selectRange .react-calendar__tile--hover {
+  background-color: #81bdf8;
+}
+
+/*? booked dates */
+.booked {
+  color: white;
+  background-color: #ee0b0b;
+  pointer-events: none;
+}
+
+.booked::before {
+  border: none;
+}
+
+/*! ================================  END "STYLING CALENDAR"   ============================  */
+
+/*! ======================     "BOTTOM OF CALENDAR PAGE"    ============================*/
+.message {
+  margin: 20px 0;
+}
+
+.booking-nights {
+  display: flex;
+  align-items: center;
+  margin-left: 8vw;
+}
+
+.booking-nights span {
+  font-weight: bold;
+  margin-right: 1rem;
+}
+
+.booking-nights input {
+  width: 70%;
+  padding: 0.2rem;
+  outline: none;
+  border-style: solid;
+  border-radius: 3px;
+}
+
+.btn {
+  font-family: 'Roboto', sans-serif;
+  border-style: solid;
+  padding: 5px 15px;
+  background-color: white;
+  color: black;
+  border: 1.9px solid black;
+  box-shadow: 2px 2px rgba(0, 0, 0, 0.8);
+}
+
+.add-btn {
+  background-color: #7a97f8;
+  border-right: 0;
+}
+
+/*? ==== "add" button  ===== */
+.disabled {
+  pointer-events: none;
+  color: #c3c7ca;
+  background-color: #bebebe;
+}
+/*! ======================   END "BOTTOM OF CALENDAR PAGE"    ============================*/
+/*! ==========================     END "STYLE CALENDAR PAGE"    ========================================*/
